@@ -91,7 +91,7 @@ do
 		grep -v "^$" $id$element.csv | cut -d "," -f4 | grep -v "^$" | sort -nr > Luminosite.csv
 		maxLuminosite=$(cat Luminosite.csv | head -n 1)
 		minLuminosite=$(cat Luminosite.csv | tail -n 1) 
-		moyenneLuminositeGlobal=$(awk '{ total += $1; count++ } END {print total/count }' Luminosite.csv)
+		moyenneLuminosite=$(awk '{ total += $1; count++ } END {print total/count }' Luminosite.csv)
 
 
 		#moyenneTemperature
